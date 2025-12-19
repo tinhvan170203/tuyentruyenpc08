@@ -1,1 +1,0 @@
-import{aw as t,ax as n}from"./index-f97152f5.js";const r=t.create({baseURL:{API_SERVER:n},headers:{},withCredentials:!0});r.interceptors.request.use(function(e){return e},function(e){return Promise.reject(e)});r.interceptors.response.use(function(e){return e},function(e){return Promise.reject(e)});export{r as a};
