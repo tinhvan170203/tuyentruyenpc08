@@ -1,0 +1,1 @@
+import{M as a,N as r,O as t}from"./index-b04b101c.js";var e={},u=r;Object.defineProperty(e,"__esModule",{value:!0});var v=e.default=void 0,o=u(a()),d=t,i=(0,o.default)((0,d.jsx)("path",{d:"M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"}),"Dashboard");v=e.default=i;export{v as d};
