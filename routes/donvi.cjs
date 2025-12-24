@@ -2,9 +2,9 @@ const express = require('express');
 
 const router = express.Router();
 
-const donvi = require('../controllers/donvi');
-const checkRole = require('../middlewares/checkRole');
-const middlewareController = require('../middlewares/verifyToken');
+const donvi = require('../controllers/donvi.cjs');
+const checkRole = require('../middlewares/checkRole.cjs');
+const middlewareController = require('../middlewares/verifyToken.cjs');
 
 
 router.get('/donvi/fetch', middlewareController.verifyToken, checkRole('xem đơn vị'), donvi.getDonviList)

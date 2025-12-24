@@ -1,7 +1,7 @@
-const Cauhois = require("../models/CauHoi");
-const Chuyendes = require("../models/Chuyende");
-const Cuocthis = require("../models/Cuocthi");
-const LichsuThis = require("../models/LichsuThi");
+const Cauhois = require("../models/CauHoi.cjs");
+const Chuyendes = require("../models/Chuyende.cjs");
+const Cuocthis = require("../models/Cuocthi.cjs");
+const LichsuThis = require("../models/LichsuThi.cjs");
 
 
 

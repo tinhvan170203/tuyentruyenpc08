@@ -2,9 +2,9 @@ const express = require('express');
 
 const router = express.Router();
 
-const auth = require('../controllers/auth');
-const checkRole = require('../middlewares/checkRole');
-const middlewareController = require('../middlewares/verifyToken');
+const auth = require('../controllers/auth.cjs');
+const checkRole = require('../middlewares/checkRole.cjs');
+const middlewareController = require('../middlewares/verifyToken.cjs');
 
 router.post('/login', auth.login )
 router.post('/change-pass', auth.changePassword )

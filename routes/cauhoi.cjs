@@ -2,9 +2,9 @@ const express = require('express');
 
 const router = express.Router();
 
-const cauhoi = require('../controllers/cauhoi');
-const checkRole = require('../middlewares/checkRole');
-const middlewareController = require('../middlewares/verifyToken');
+const cauhoi = require('../controllers/cauhoi.cjs');
+const checkRole = require('../middlewares/checkRole.cjs');
+const middlewareController = require('../middlewares/verifyToken.cjs');
 
 
 router.get('/fetch/:id', middlewareController.verifyToken, checkRole('xem câu hỏi'), cauhoi.getCauhois)

@@ -2,11 +2,11 @@ const express = require('express');
 
 const router = express.Router();
 
-const monthi = require('../controllers/monthi');
-const thisinh = require('../controllers/thisinh');
-const checkRole = require('../middlewares/checkRole');
-const middlewareController = require('../middlewares/verifyToken');
-const chuyende = require('../controllers/chuyende');
+const monthi = require('../controllers/monthi.cjs');
+const thisinh = require('../controllers/thisinh.cjs');
+const checkRole = require('../middlewares/checkRole.cjs');
+const middlewareController = require('../middlewares/verifyToken.cjs');
+const chuyende = require('../controllers/chuyende.cjs');
 
 
 router.get('/fetch', middlewareController.verifyToken, checkRole('xem môn thi'), monthi.getMonthiList)
