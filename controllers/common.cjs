@@ -6,7 +6,7 @@ const Danhsachthisinhs = require("../models/DanhSachThiSinh.cjs");
 const Cauhois = require("../models/CauHoi.cjs");
 const LichsuThis = require("../models/LichsuThi.cjs");
 const { default: mongoose } = require("mongoose");
-
+const _ = require('lodash');
 function shuffleObject(obj) {
     // 1. Tách question và các phần còn lại (options) bằng Destructuring
     const { question, ...options } = obj;
@@ -159,6 +159,7 @@ try {
 // console.log(randomQuestions)
 // const randomQuestions = result[0].finalQuestions;
 
+      randomQuestions = _.shuffle(randomQuestions);
       let questionsSave = [];
       // biến đổi loại bỏ answer -> send to client and save localStorage
       let questionsSendClient = randomQuestions.map(i => {
