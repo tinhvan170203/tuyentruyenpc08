@@ -11,7 +11,7 @@ app.use(cookies());
 
 // 1. Cấu hình CORS
 app.use(cors({
-    origin: ["http://localhost:5173", "https://thiantoangiaothongpc08hy.vercel.app"],
+    origin: ["http://localhost:5173", "https://thiantoangiaothongpc08hy.vercel.app", "http://localhost:4000"],
     credentials: true,
 }));
 
