@@ -1,6 +1,6 @@
-const Cauhois = require("../models/CauHoi");
-const Danhsachthisinhs = require("../models/DanhSachThiSinh");
-const LichsuThis = require("../models/LichsuThi");
+const Cauhois = require("../models/CauHoi.cjs");
+const Danhsachthisinhs = require("../models/DanhSachThiSinh.cjs");
+const LichsuThis = require("../models/LichsuThi.cjs");
 
 
 

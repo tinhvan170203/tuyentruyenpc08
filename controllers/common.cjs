@@ -1,10 +1,10 @@
 
-const Donvis = require("../models/Donvi");
-const Monthis = require("../models/Monthi");
-const Cuocthis = require("../models/Cuocthi");
-const Danhsachthisinhs = require("../models/DanhSachThiSinh");
-const Cauhois = require("../models/CauHoi");
-const LichsuThis = require("../models/LichsuThi");
+const Donvis = require("../models/Donvi.cjs");
+const Monthis = require("../models/Monthi.cjs");
+const Cuocthis = require("../models/Cuocthi.cjs");
+const Danhsachthisinhs = require("../models/DanhSachThiSinh.cjs");
+const Cauhois = require("../models/CauHoi.cjs");
+const LichsuThis = require("../models/LichsuThi.cjs");
 const { default: mongoose } = require("mongoose");
 const _ = require('lodash');
 function shuffleObject(obj) {

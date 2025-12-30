@@ -1,10 +1,10 @@
-const Cauhois = require("../models/CauHoi");
-const Cuocthis = require("../models/Cuocthi");
-const Danhsachthisinhs = require("../models/DanhSachThiSinh");
-const Donvis = require("../models/Donvi");
-const LichsuThis = require("../models/LichsuThi");
-const Monthis = require("../models/Monthi");
-const Users = require("../models/User");
+const Cauhois = require("../models/CauHoi.cjs");
+const Cuocthis = require("../models/Cuocthi.cjs");
+const Danhsachthisinhs = require("../models/DanhSachThiSinh.cjs");
+const Donvis = require("../models/Donvi.cjs");
+const LichsuThis = require("../models/LichsuThi.cjs");
+const Monthis = require("../models/Monthi.cjs");
+const Users = require("../models/User.cjs");
 
 module.exports = {
   //controller monthi

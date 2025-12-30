@@ -1,6 +1,6 @@
-const Cauhois = require("../models/CauHoi");
-const LichsuThis = require("../models/LichsuThi");
-const Chuyendes = require("../models/Chuyende");
+const Cauhois = require("../models/CauHoi.cjs");
+const LichsuThis = require("../models/LichsuThi.cjs");
+const Chuyendes = require("../models/Chuyende.cjs");
 
 
 module.exports = {

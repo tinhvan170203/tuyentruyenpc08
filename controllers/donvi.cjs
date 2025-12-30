@@ -1,6 +1,6 @@
-const Cauhois = require("../models/CauHoi");
-const Danhsachthisinhs = require("../models/DanhSachThiSinh");
-const Donvis = require("../models/Donvi");
+const Cauhois = require("../models/CauHoi.cjs");
+const Danhsachthisinhs = require("../models/DanhSachThiSinh.cjs");
+const Donvis = require("../models/Donvi.cjs");
 
 module.exports = {
   getDonviList: async (req, res) => {

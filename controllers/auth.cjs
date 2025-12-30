@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
-const RefreshTokens = require("../models/RefreshToken");
-const Users = require("../models/User");
+const RefreshTokens = require("../models/RefreshToken.cjs");
+const Users = require("../models/User.cjs");
 
 module.exports = {
   login: async (req, res) => {
