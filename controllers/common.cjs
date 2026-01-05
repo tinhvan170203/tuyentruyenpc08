@@ -94,8 +94,8 @@ module.exports = {
     }
   },
 
-  loginTest: async (req, res) => {
-    let {name, phone, id_cuocthi} = req.body;
+   loginTest: async (req, res) => {
+    let {name, phone, birthday, id_cuocthi} = req.body;
     try {
       let item = await Cuocthis.findById(id_cuocthi);
       let config = item.config; // cấu hình số câu hỏi
@@ -149,29 +149,34 @@ try {
 
     // Kết quả trả về từ aggregate luôn là một mảng, lấy phần tử đầu tiên
      randomQuestions = result.length > 0 ? result[0].finalQuestions : [];
-    
-    console.log("Số câu hỏi lấy được:", randomQuestions.length);
-
-
+    // console.log("Số câu hỏi lấy được:", randomQuestions.length);
 } catch (error) {
     console.error("Lỗi khi lấy câu hỏi:", error);
 }
 // console.log(randomQuestions)
 // const randomQuestions = result[0].finalQuestions;
-randomQuestions = _.shuffle(randomQuestions);
+// randomQuestions = _.shuffle(randomQuestions);
       let questionsSave = [];
       // biến đổi loại bỏ answer -> send to client and save localStorage
       let questionsSendClient = randomQuestions.map(i => {
         let {answer, monthi, ...tempQuestion} = i;
         // câu hỏi và  sau khi random các đáp án
-        let shuffledObj = shuffleObject({...tempQuestion});
-        const { question,__v, image, _id,chuyende, chuyendeString,createdAt, updatedAt, ...rest } = shuffledObj;
+        // let shuffledObj = shuffleObject({...tempQuestion});
+        // const { question,__v, image, _id,chuyende, chuyendeString,createdAt, updatedAt, ...rest } = shuffledObj;
+        // đảo vị trí các câu trả lời
+        // const options_sort = Object.keys(rest);
+
+
+        const { question,__v, image, _id,chuyende, chuyendeString,createdAt, updatedAt, ...rest } = tempQuestion;
         const options_sort = Object.keys(rest);
+
         questionsSave.push({
           question: i._id,
           options_sort,
         })
-        return {questionlist : shuffledObj, options_sort}
+
+        // return {questionlist : shuffledObj, options_sort}
+        return {questionlist : tempQuestion, options_sort}
       });
 
   
@@ -183,7 +188,7 @@ randomQuestions = _.shuffle(randomQuestions);
         thoigianbatdau: timeStart,
         thoigianketthuc: timeEnd,
         thongtinthisinh: {
-          name, phone
+          name, phone, birthday
         },
         id_cuocthi,
         thoigiannopbai: 0,
@@ -209,6 +214,7 @@ randomQuestions = _.shuffle(randomQuestions);
       });
     }
   },
+
 
   checkedTest: async (req, res) => {
     let id = req.params.id; //id bài thi cần test

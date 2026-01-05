@@ -22,7 +22,8 @@ const lichsuthiSchema = new Schema({
     },
   thongtinthisinh: {
     name: String,
-    phone: String
+    phone: String,
+    birthday: Date
   },
 }, {timestamps: true});
 
